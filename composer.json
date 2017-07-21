@@ -1,0 +1,20 @@
+{
+    "name": "catpkt/encryptor",
+    "description": "Encryptor for other libraries",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fenz",
+            "email": "uukoo@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CatPKT\\Encryptor\\": "libs/"
+        }
+    }
+}
