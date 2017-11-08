@@ -4,7 +4,7 @@ namespace CatPKT\Encryptor;
 
 ////////////////////////////////////////////////////////////////
 
-class Encryptor
+class Encryptor implements IEncryptor
 {
 
 	/**
@@ -47,9 +47,9 @@ class Encryptor
 	 *
 	 * @param mixed $data
 	 *
-	 * @return void
+	 * @return string
 	 */
-	public function encrypt( $data )
+	public function encrypt( $data ):string
 	{
 		$iv= random_bytes(16);
 
