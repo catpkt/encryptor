@@ -101,6 +101,20 @@ class Encryptor implements IEncryptor
 	}
 
 	/**
+	 * Method __invoke
+	 *
+	 * @access public
+	 *
+	 * @param  mixed $data
+	 *
+	 * @return string
+	 */
+	public function __invoke( $data ):string
+	{
+		return $this->encrypt( $data );
+	}
+
+	/**
 	 * Method validMac
 	 *
 	 * @access private
