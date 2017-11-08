@@ -1,6 +1,6 @@
 <?php
 
-namespace CatPKT\PictureProvider\Encrypt;
+namespace CatPKT\Encryptor;
 
 ////////////////////////////////////////////////////////////////
 
