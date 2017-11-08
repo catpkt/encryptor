@@ -57,7 +57,7 @@ class Encryptor implements IEncryptor
 
 		if( $value===false )
 		{
-			throw new \Exception('Could not encrypt the data.');
+			throw new EncryptException('Could not encrypt the data.');
 		}
 
 		$iv= base64_encode($iv);
@@ -89,14 +89,14 @@ class Encryptor implements IEncryptor
 
 			if( false===$decrypted )
 			{
-				throw new \Exception('Decrypt failed.');
+				throw new DecryptException('Decrypt failed.');
 			}
 
 			return unserialize( $decrypted );
 		}
-		catch( \Exception$e )
+		catch( Throwable$e )
 		{
-			throw new \Exception('Could not decrypt the data');
+			throw new DecryptException('Could not decrypt the data');
 		}
 	}
 
@@ -120,7 +120,7 @@ class Encryptor implements IEncryptor
 				hash_hmac( 'sha256', hash_hmac( 'sha256', $payload->iv.$payload->value, $this->apiKey ), $bytes, true )
 			)
 		)){
-			throw new \Exception('aoeu');
+			throw new DecryptException('aoeu');
 		}
 	}
 

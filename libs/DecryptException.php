@@ -1,0 +1,10 @@
+<?php
+
+namespace CatPKT\Encryptor;
+
+////////////////////////////////////////////////////////////////
+
+class DecryptException extends \Exception
+{
+	#
+}
