@@ -81,6 +81,11 @@ class Encryptor implements IEncryptor
 		try{
 			$payload= json_decode( base64_decode( $payload ) );
 
+			if(!( $payload instanceof \stdClass ))
+			{
+				throw new DecryptException( 'Decrypt failed.' );
+			}
+
 			$this->validMac( $payload );
 
 			$iv= base64_decode( $payload->iv );
