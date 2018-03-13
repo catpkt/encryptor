@@ -94,7 +94,7 @@ class Encryptor implements IEncryptor
 
 			return unserialize( $decrypted );
 		}
-		catch( Throwable$e )
+		catch( \Throwable$e )
 		{
 			throw new DecryptException('Could not decrypt the data');
 		}
